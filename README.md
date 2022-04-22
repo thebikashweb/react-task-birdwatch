@@ -1,6 +1,6 @@
 ## Bird Watch web app - React coding task for Junior Developer
 
-## [Video Tutorial](https://youtu.be/3kNpIbTEuos)
+## [Video Tutorial](https://youtu.be/6lDHSF3Yrgs)
 
 ## [Demo link ](https://bw-birdwatch.netlify.app)
 
