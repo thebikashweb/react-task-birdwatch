@@ -1,38 +1,214 @@
-.App {
+:root {
+  --primary: #38ADA9;
+  --grey:#7C7C7C;
+  --bg-light:#FAFAFA;
+  --white:#FFFFFF;
+  --bg-grey: #efefef;
+  --shadow:0px 0px 14px 0px rgba(105, 109, 108, 0.212);
+}
+*{
+  margin:0px;
+  padding:0px;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+:root{
+  font-size: 8px;
+  
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size:2rem;
+  color:var(--grey);
+  background-color: var(--bg-light);
+  margin:auto;
+}
+.App{
   text-align: center;
+  margin:4rem;
+}
+.App h2{
+  color:var(--primary)
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.display-none{
+  display:none;
+  
+}
+.CTA{
+  background-color: var(--primary);
+  color:var(--white);
+  box-shadow: non;
+  border: none;
+  font-weight: 600;
+  font-size: 2rem;
+  transition: 0.5s;
+}
+.CTA:hover{
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+.sort-filter{
+  display:flex;
+  flex-direction: row;
+  margin-top:1rem;
+  justify-content: flex-end;
+}
+.sort-button{
+  color:var(--primary);
+  margin-left:5px;
+}
+.sort-button:hover{
+  cursor: pointer;
+  color:#256d6b;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form{
+  background-color: var(--white);
+  max-width: 500px;
+  width:100%;
+  margin:auto;
+  transition: 0.3s;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.form h3{
+  padding-top:2rem;
+}
+.form-group{
+  padding:1.5rem;
+  display:flex;
   flex-direction: column;
+  justify-content: flex-start;
+  
+}
+.form-group label{
+  margin-right:auto;
+
+}
+.form-group input{
+  padding: 10px 5px;
+}
+.form-group textarea{
+  padding: 10px 5px;
+}
+.form-group .radio-options{
+  margin-right:auto;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-top:1rem;
+}
+.form-group .radio-input{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding:1rem;
+}
+
+.form-buttons{
+  padding:1.5rem;
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  
+}
+.form-buttons .button{
+  width:100%;
+  padding:10px 0px;
+  margin:0 5px 0 0 ;
 }
 
-.App-link {
-  color: #61dafb;
+/*for smaller screens*/
+
+@media only screen and (max-width: 600px)  {
+
+  .form-group .radio-options{
+    margin-right:auto;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top:1rem;
+  }
+  .form-group .radio-input{
+    display:flex;
+    justify-content: flex-start;
+  }
+  .card-header{
+    display:flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-right:1rem;
+  }
+  .rarity-type{
+   margin-left:0px!important;
+  }
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Bird list*/
+.bird-list{
+  margin:auto;
+  max-width: 500px;
+}
+.bird-card{
+  padding:1rem;
+  margin:10px auto 5px auto ;
+  box-shadow:var(--shadow) ;
+}
+.card-header{
+  display:flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-right:1rem;
+}
+.bird-card .name{
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: left;
+  padding:1rem 1rem 0 1rem;
+  color:var(--primary);
+}
+.bird-card .date-added{
+  padding:0 0 0 1rem;
+  text-align:left;
+  font-size:12px;
+  color:var(--grey);
+}
+.rarity-type{
+  margin-left:auto;
+}
+.rarity-type.common{
+  background-color: rgb(7, 211, 68);
+  padding: 1rem;
+  color: #100c0c;
+  width:30%;  
+}
+.rarity-type.rare {
+  background-color: #dedd1d;
+  padding: 1rem;
+  color: #100c0c;
+  width:30%;  
+}
+.rarity-type.extremelyrare{
+  background-color: rgb(255, 51, 0);
+  padding: 1rem;
+  color:#FFFFFF; 
+  width:30%;   
+}
+.bird-card .note-info{
+  display:flex;
+  justify-content: flex-start;
+  padding:2rem 0 0 1rem;
+  font-weight: 600;
+  align-items: baseline;
+}
+.note-info p{
+  font-weight: 400;
+  padding-left:1rem;
+  width:100%;
+  margin:1rem;
+  text-align: left;
 }
